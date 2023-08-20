@@ -1,0 +1,31 @@
+:root {
+  --bg-base: transparent;
+  --color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg-base);
+  color: var(--text-color-base);
+  color-scheme: var(--color-scheme);
+  font-size: var(--text-font-base);
+  line-height: var(--leading-base);
+  font-family: var(--font-sans-base);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+}
+
+body {
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+iframe {
+  color-scheme: auto;
+  border: 0;
+}

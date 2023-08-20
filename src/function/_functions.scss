@@ -1,0 +1,22 @@
+// Find complementary Hue.
+@function complementaryHue($hue) {
+  @if $hue > 180 {
+    $hue: $hue - 180;
+  } @else if $hue < 360 {
+    $hue: $hue + 180;
+  }
+
+  @return $hue;
+}
+
+// Remove unit function.
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Convert to REM unit.
+@function rem-calc($values) {
+  $value: strip-unit($values) * 1rem;
+  $rem-values: $value / 16;
+  @return $rem-values;
+}

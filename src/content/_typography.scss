@@ -1,0 +1,12 @@
+:root {
+  --paragraph-margin-bottom: var(--spacing-vertical);
+  --lead-font-size: 125%;
+}
+
+p {
+  margin: 0 0 var(--paragraph-margin-bottom) 0;
+}
+
+.lead {
+  font-size: var(--lead-font-size);
+}

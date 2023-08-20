@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>marut.css - Build My Own CSS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/marut.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>marut.css</h1>
+      <p>A fancy stylesheet</p>
+      <h2>Color</h2>
+      <div class="container__paragraph">
+        <p class="lead">Why I choose OKLCH instead of HSL</p>
+        <p>I did it in the first place. When I chose the primary color and generated lightness of them. It returned a black-to-white shade</p>
+        <p>Example: I choose a Dark Blue color hsl(245.8, 87.4%, 56.3%). It will be like this</p>
+      </div>
+      <h3>HSL Hue: 245.8</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 0%)">Black</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 10%)">100</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 20%)">200</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 30%)">300</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 40%)">400</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 50%)">500</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 60%)">600</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 65%)">650</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 70%)">700</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 75%)">750</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 80%)">800</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 85%)">850</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 90%)">900</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 95%)">950</div>
+        <div class="cell" style="background-color: hsl(245.8, 87.4%, 100%)">White</div>
+      </div>
+      <h3>OKLCH Hue: 274.11</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: oklch(0% 0.268 274.11)">Not Black</div>
+        <div class="cell" style="background-color: oklch(10% 0.268 274.11)">100</div>
+        <div class="cell" style="background-color: oklch(20% 0.268 274.11)">200</div>
+        <div class="cell" style="background-color: oklch(30% 0.268 274.11)">300</div>
+        <div class="cell" style="background-color: oklch(40% 0.268 274.11)">400</div>
+        <div class="cell" style="background-color: oklch(50% 0.268 274.11)">500</div>
+        <div class="cell" style="background-color: oklch(60% 0.268 274.11)">600</div>
+        <div class="cell" style="background-color: oklch(65% 0.268 274.11)">650</div>
+        <div class="cell" style="background-color: oklch(70% 0.268 274.11)">700</div>
+        <div class="cell" style="background-color: oklch(75% 0.268 274.11)">750</div>
+        <div class="cell" style="background-color: oklch(80% 0.268 274.11)">800</div>
+        <div class="cell" style="background-color: oklch(85% 0.268 274.11)">850</div>
+        <div class="cell" style="background-color: oklch(90% 0.268 274.11)">900</div>
+        <div class="cell" style="background-color: oklch(95% 0.268 274.11)">950</div>
+        <div class="cell" style="background-color: oklch(100% 0.268 274.11)">Not white</div>
+      </div>
+      <div class="container__paragraph">
+        <p class="lead">Do you see any difference?</p>
+        <p>When we add Lightness into HSL color. It gradually turns to purple color and becomes white at the end.</p>
+        <p>Unlike OKLCH color, It keeps it own blue shade no matter how much Lightness is added.</p>
+        <p>Let's add another complementary color by reduce 180 degree to Hue</p>
+      </div>
+      <h3>Complementary HSL Hue: 65.8</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 0%)">Black</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 10%)">100</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 20%)">200</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 30%)">300</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 40%)">400</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 50%)">500</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 60%)">600</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 65%)">650</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 70%)">700</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 75%)">750</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 80%)">800</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 85%)">850</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 90%)">900</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 95%)">950</div>
+        <div class="cell" style="background-color: hsl(65.8, 87.4%, 100%)">White</div>
+      </div>
+      <h3>Complementary OKLCH Hue: 94.11</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: oklch(0% 0.268 94.11)">Not Black</div>
+        <div class="cell" style="background-color: oklch(10% 0.268 94.11)">100</div>
+        <div class="cell" style="background-color: oklch(20% 0.268 94.11)">200</div>
+        <div class="cell" style="background-color: oklch(30% 0.268 94.11)">300</div>
+        <div class="cell" style="background-color: oklch(40% 0.268 94.11)">400</div>
+        <div class="cell" style="background-color: oklch(50% 0.268 94.11)">500</div>
+        <div class="cell" style="background-color: oklch(60% 0.268 94.11)">600</div>
+        <div class="cell" style="background-color: oklch(65% 0.268 94.11)">650</div>
+        <div class="cell" style="background-color: oklch(70% 0.268 94.11)">700</div>
+        <div class="cell" style="background-color: oklch(75% 0.268 94.11)">750</div>
+        <div class="cell" style="background-color: oklch(80% 0.268 94.11)">800</div>
+        <div class="cell" style="background-color: oklch(85% 0.268 94.11)">850</div>
+        <div class="cell" style="background-color: oklch(90% 0.268 94.11)">900</div>
+        <div class="cell" style="background-color: oklch(95% 0.268 94.11)">950</div>
+        <div class="cell" style="background-color: oklch(100% 0.268 94.11)">Not white</div>
+      </div>
+      <div class="container__paragraph">
+        <p>Complementary colors are totally different.</p>
+        <p>How many complementary HSL color that we can use? From 100 - 1000. Almost none of them. They have low contrast.</p>
+        <p>I would say the same; OKLCH keeps it own shade and doesn't expand to white color.</p>
+      </div>
+
+      <h2>Primary, Accent and Grayscale</h2>
+      <div class="container__paragraph">
+        <p>Many CSS Frameworks have 2 colors. Primary and Secondary (gray color).</p>
+        <p>I add Accent and Grayscale instead.</p>
+      </div>
+      <h3>Primary</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: var(--primary-color-100)"></div>
+        <div class="cell" style="background-color: var(--primary-color-200)"></div>
+        <div class="cell" style="background-color: var(--primary-color-300)"></div>
+        <div class="cell" style="background-color: var(--primary-color-400)"></div>
+        <div class="cell" style="background-color: var(--primary-color-500)"></div>
+        <div class="cell" style="background-color: var(--primary-color-600)"></div>
+        <div class="cell" style="background-color: var(--primary-color-700)"></div>
+        <div class="cell" style="background-color: var(--primary-color-800)"></div>
+        <div class="cell" style="background-color: var(--primary-color-900)"></div>
+      </div>
+      <h3>Accent</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: var(--accent-color-100)"></div>
+        <div class="cell" style="background-color: var(--accent-color-200)"></div>
+        <div class="cell" style="background-color: var(--accent-color-300)"></div>
+        <div class="cell" style="background-color: var(--accent-color-400)"></div>
+        <div class="cell" style="background-color: var(--accent-color-500)"></div>
+        <div class="cell" style="background-color: var(--accent-color-600)"></div>
+        <div class="cell" style="background-color: var(--accent-color-700)"></div>
+        <div class="cell" style="background-color: var(--accent-color-800)"></div>
+        <div class="cell" style="background-color: var(--accent-color-900)"></div>
+      </div>
+      <h3>Grayscale</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: var(--color-gray-0)"></div>
+        <div class="cell" style="background-color: var(--color-gray-100)"></div>
+        <div class="cell" style="background-color: var(--color-gray-200)"></div>
+        <div class="cell" style="background-color: var(--color-gray-300)"></div>
+        <div class="cell" style="background-color: var(--color-gray-400)"></div>
+        <div class="cell" style="background-color: var(--color-gray-500)"></div>
+        <div class="cell" style="background-color: var(--color-gray-600)"></div>
+        <div class="cell" style="background-color: var(--color-gray-700)"></div>
+        <div class="cell" style="background-color: var(--color-gray-800)"></div>
+        <div class="cell" style="background-color: var(--color-gray-900)"></div>
+        <div class="cell" style="background-color: var(--color-gray-1000)"></div>
+      </div>
+      <h3>Success</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: var(--success-color-100)"></div>
+        <div class="cell" style="background-color: var(--success-color-200)"></div>
+        <div class="cell" style="background-color: var(--success-color-300)"></div>
+        <div class="cell" style="background-color: var(--success-color-400)"></div>
+        <div class="cell" style="background-color: var(--success-color-500)"></div>
+        <div class="cell" style="background-color: var(--success-color-600)"></div>
+        <div class="cell" style="background-color: var(--success-color-700)"></div>
+        <div class="cell" style="background-color: var(--success-color-800)"></div>
+        <div class="cell" style="background-color: var(--success-color-900)"></div>
+      </div>
+      <h3>Info</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: var(--info-color-100)"></div>
+        <div class="cell" style="background-color: var(--info-color-200)"></div>
+        <div class="cell" style="background-color: var(--info-color-300)"></div>
+        <div class="cell" style="background-color: var(--info-color-400)"></div>
+        <div class="cell" style="background-color: var(--info-color-500)"></div>
+        <div class="cell" style="background-color: var(--info-color-600)"></div>
+        <div class="cell" style="background-color: var(--info-color-700)"></div>
+        <div class="cell" style="background-color: var(--info-color-800)"></div>
+        <div class="cell" style="background-color: var(--info-color-900)"></div>
+      </div>
+      <h3>Warning</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: var(--warning-color-100)"></div>
+        <div class="cell" style="background-color: var(--warning-color-200)"></div>
+        <div class="cell" style="background-color: var(--warning-color-300)"></div>
+        <div class="cell" style="background-color: var(--warning-color-400)"></div>
+        <div class="cell" style="background-color: var(--warning-color-500)"></div>
+        <div class="cell" style="background-color: var(--warning-color-600)"></div>
+        <div class="cell" style="background-color: var(--warning-color-700)"></div>
+        <div class="cell" style="background-color: var(--warning-color-800)"></div>
+        <div class="cell" style="background-color: var(--warning-color-900)"></div>
+      </div>
+      <h3>Danger</h3>
+      <div class="cell-container">
+        <div class="cell" style="background-color: var(--danger-color-100)"></div>
+        <div class="cell" style="background-color: var(--danger-color-200)"></div>
+        <div class="cell" style="background-color: var(--danger-color-300)"></div>
+        <div class="cell" style="background-color: var(--danger-color-400)"></div>
+        <div class="cell" style="background-color: var(--danger-color-500)"></div>
+        <div class="cell" style="background-color: var(--danger-color-600)"></div>
+        <div class="cell" style="background-color: var(--danger-color-700)"></div>
+        <div class="cell" style="background-color: var(--danger-color-800)"></div>
+        <div class="cell" style="background-color: var(--danger-color-900)"></div>
+      </div>
+      <h2>Button</h2>
+      <button class="button button--primary">Primary</button>
+      <button class="button button--accent">Accent</button>
+      <button class="button button--secondary">Secondary</button>
+      <button class="button button--success">Success</button>
+      <button class="button button--info">Info</button>
+      <button class="button button--warning">Warning</button>
+      <button class="button button--danger">Danger</button>
+      <button class="button button--link">Link</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+:root {
+  --container-width: 60rem;
+  --container-width-xl: 90rem;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding: 0 var(--spacing-horizontal);
+  width: 100%;
+  margin: 0 auto;
+
+  &--fluid {
+    max-width: inherit;
+  }
+
+  @media print, screen and (min-width: 82.5em) {
+    & {
+      max-width: var(--container-width-xl);
+    }
+  }
+}
+
+.container__paragraph {
+  max-width: 60ch;
+  margin: 0 auto;
+}

@@ -1,0 +1,27 @@
+@import 'function/functions';
+@import 'common/variables';
+@import 'common/base';
+@import 'components/button';
+@import 'content/heading';
+@import 'content/typography';
+@import 'layout/grid';
+
+.cell-container {
+  display: flex;
+  border-radius: 8px;
+  background-color: #f1eff7;
+  border: 1px solid #e3e1e9;
+  overflow: hidden;
+  max-width: 75rem;
+  margin: 0 auto 1rem;
+}
+
+.cell {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  transition: all 0.2s linear;
+  display: flex;
+  color: #fff;
+}

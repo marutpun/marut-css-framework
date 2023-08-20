@@ -1,0 +1,77 @@
+$base-c: 0.23;
+$base-h: 9.63;
+
+$headingSizes: (
+  h1: 2rem,
+  h2: 1.5rem,
+  h3: 1.25rem,
+  h4: 1rem,
+  h5: 0.875rem,
+  h6: 0.85rem,
+);
+
+$fontWeights: (
+  light: 300,
+  normal: 400,
+  semibold: 500,
+  bold: 700,
+);
+
+:root {
+  /* Grayscale */
+  @for $i from 0 through 10 {
+    --color-gray-#{$i * 100}: oklch(#{100 - ($i * 10%)} 0 0);
+  }
+  /* Primary Color */
+  @for $i from 1 to 10 {
+    --primary-color-#{$i * 100}: oklch(#{(100 - $i * 10%)} #{$base-c $base-h});
+  }
+
+  /* Accent Color */
+  @for $i from 1 to 10 {
+    --accent-color-#{$i * 100}: oklch(#{(100 - $i * 10%)} #{$base-c complementaryHue($base-h)});
+  }
+
+  /* Secondary Color */
+  @for $i from 1 to 10 {
+    --secondary-color-#{$i * 100}: var(--color-gray-#{$i * 100});
+  }
+
+  /* Success Color */
+  @for $i from 1 to 10 {
+    --success-color-#{$i * 100}: oklch(#{(100 - $i * 10%)} 0.2118938201895381 142.49533888780988);
+  }
+
+  /* Info Color */
+  @for $i from 1 to 10 {
+    --info-color-#{$i * 100}: oklch(#{(100 - $i * 10%)} 0.115 222.57);
+  }
+
+  /* Warning Color */
+  @for $i from 1 to 10 {
+    --warning-color-#{$i * 100}: oklch(#{(100 - $i * 10%)} 0.171 81.55);
+  }
+
+  /* Danger Color */
+  @for $i from 1 to 10 {
+    --danger-color-#{$i * 100}: oklch(#{(100 - $i * 10%)} 0.228 25.13);
+  }
+}
+
+:root {
+  /* Spacing */
+  --global-spacing: 1rem;
+  --spacing-horizontal: var(--global-spacing);
+  --spacing-vertical: var(--global-spacing);
+
+  /* Typography */
+  --text-color-base: var(--color-gray-900);
+  --text-font-base: 100%;
+  --leading-base: 1.5;
+  --font-sans-base: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+
+  @each $fontWeight, $weight in $fontWeights {
+    --font-weight-#{$fontWeight}: #{$weight};
+  }
+}

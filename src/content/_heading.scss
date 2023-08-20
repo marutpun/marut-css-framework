@@ -1,0 +1,32 @@
+:root {
+  --heading-color: inherit;
+  --heading-margin-top: 0;
+  --heading-margin-bottom: var(--spacing-vertical);
+  --heading-font-family: var(--font-sans-base);
+  --heading-font-weight: var(--font-weight-bold);
+  --heading-line-height: 1.25;
+
+  @each $heading, $size in $headingSizes {
+    --#{$heading}-font-size: #{$size};
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  margin: var(--heading-margin-top) 0 var(--heading-margin-bottom) 0;
+}
+
+@for $size from 1 through 6 {
+  h#{$size},
+  .h#{$size} {
+    font-size: var(--h#{$size}-font-size);
+  }
+}
